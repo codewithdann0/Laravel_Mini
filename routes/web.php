@@ -8,7 +8,12 @@ Route::get('/', function () {
 });
 
 Route::get('/' , function (){
-    return view('Pizza');
+    $pizza =[
+        "type" => "Ethiopian Pizza ",
+        "price" => "357Birr",
+        "Base" => "Meta and Egg"
+    ];
+    return view('Pizza',$pizza);
 });
 
 

@@ -20,7 +20,15 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-           Pizza
-        </div>
+          
+          <div>
+                     <h1 class="align-center">Pizza House</h1>
+
+                     <p>{{$type}}</p><br>
+                     
+                     <p>{{$Base}}</p><br>
+                     <p>{{$price}}</p><br>
+          </div>
+        
     </body>
 </html>
