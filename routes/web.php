@@ -7,13 +7,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/' , function (){
-    $pizza =[
-        "type" => "Ethiopian Pizza ",
-        "price" => "357Birr",
-        "Base" => "Meta and Egg"
+Route::get('/', function () {
+    $pizzas = [
+        ["type" => "Ethiopian Pizza", "price" => "57", "base" => "Meta and Egg"],
+        ["type" => "Ethiopian Pizza", "price" => "57", "base" => "Meta and Egg"],
+        ["type" => "Ethiopian Pizza", "price" => "57", "base" => "Meta and Egg"]
     ];
-    return view('Pizza',$pizza);
+
+    return view('Pizza', ['pizzas' => $pizzas]);
 });
 
 

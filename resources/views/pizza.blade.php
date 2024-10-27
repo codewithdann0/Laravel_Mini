@@ -22,13 +22,21 @@
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
           
           <div>
-                     <h1 class="align-center">Pizza House</h1>
-
-                     <p>{{$type}}</p><br>
-                     
-                     <p>{{$Base}}</p><br>
-                     <p>{{$price}}</p><br>
+                     <h1 class="align-center">Pizza List</h1>
           </div>
-        
+          {{-- @for ($i = 0; $i < count($pizzas); $i++)
+            <p>{{ $pizzas[$i]['type'] }}</p> <br>
+          @endfor --}}
+             @foreach ($pizzas as $pizza )
+                   <p> {{$loop -> index}}-{{$pizza['type']}}- {{$pizza['base']}}</p>
+                   @foreach ($pizzas as $pizza)
+                   @if ($loop->first)
+                       <p>First LOOP</p>
+                   @endif
+               
+                   <p>{{ $pizza['type'] }}</p>
+               @endforeach
+               
+             @endforeach
     </body>
 </html>
